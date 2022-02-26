@@ -80,6 +80,13 @@ def calculate_surplus_data(sales_row):
     stock_row = stock[-1]
     print(stock_row)
 
+    surplus_data = []
+    for stock, sales in zip(stock_row, sales_row):
+        surplus = int(stock) - sales
+        surplus_data.append(surplus)
+
+    return surplus_data
+
 
 def main():
     """
